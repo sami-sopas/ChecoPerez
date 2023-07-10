@@ -1,0 +1,233 @@
+/* ********************* CUSTOM PROPERTIES (VARIABLES CSS) ******************** */
+:root {
+    --first-color: #010007;
+    --first-alpha-color: rgb(157, 162, 181);
+    --second-color: rgb(218, 225, 253);
+    --sencond-alpha-color:rgba(218,225,253,0.70);
+    --third-color: rgb(240, 237, 226);
+    --third-alpha-color: rgba(33, 29, 34, 0.85);
+
+    --link-color: rgb(80,158,227);
+    --link-alpha-color: rgba(80,158,227,0.75);
+
+    
+    --bg-color: rgb(245,245,245);
+    --bg-alpha-color: rgba(245,245,245,0.80);
+}
+/* ********************* RESET STYLES ******************** */
+/* Sobreescribiendo la fuente que viene por defecto en bootstrap para el body */
+body {
+    font-family: 'Raleway',sans-serif;
+}
+
+/* para que el elemento activo de la navbar sea un subrayado */
+.active {
+    text-decoration: underline black;
+}
+
+.active:hover{
+    text-decoration: underline white;
+}
+
+/* Sobreescribiendo el estilo de los enlaces */
+a {
+    color: var(--link-color);
+    transition: all .3s ease-out;
+}
+
+a:hover {
+    color: var(--link-alpha-color);
+}
+
+
+/* submenu de la navbar */
+.dropdown-item {
+    color: black;
+    font-weight: bold;
+    transition:all .3 ease-out;
+}
+
+/* quitando el fondo al submenu para que solo se cambien las letras de color */
+.dropdown-item:hover {
+    color:var(--first-alpha-color);
+    background-color: white;
+    font-weight: bold;
+}
+
+/* dentro de la clase navbar-brand hay una img, a eso le ponemos las siguientes propiedades */
+.navbar-brand img{
+    width: auto;
+    height: 50px; 
+}
+
+/* icono hamburguesa que es un vector en realidad, aqui modificamos sus colores
+   para que este de color blanco por defecto */
+.navbar .navbar-toggler{
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 7, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    transition:all .3 ease-out;
+}
+
+/* cuando pasemos el raton, el boton hamburguesa pasara a ser color blanco */
+.navbar .navbar-toggler:hover {
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    opacity: 1.20; /* opacidad para un efecto de transicion */
+}
+
+/* animacion de suavidad  */
+.nav-item {
+    transition:all .3 ease-out;
+}
+
+/* efecto hover a los fondos de los submenus */
+.nav-item:hover{
+    background-color: var(--first-alpha-color);
+}
+
+
+/* texto de la barra de navegacion */
+.nav-link {
+    margin-left: 0.5rem;
+    color: var(--first-color);
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+
+
+/* variable que viene con bootstrap */
+.nav-link:hover{
+    color: var(--bs-white);
+}
+
+.bg-secong-alpha-color {
+    background-color: var(--sencond-alpha-color);
+}
+
+/* color de fondo para Antecedentes */
+.bg-color{
+    background-color:var(--bg-color) ;
+}
+
+/* modificaciones para las imagenes del carrucel */
+.carousel-img {
+    display: block; /* Establece la imagen como un elemento de bloque */
+    margin: 0 auto; /* Alinea la imagen horizontalmente mediante márgenes automáticos */
+    max-width: 800px; /* Establece el ancho máximo deseado */
+    max-height: 500px; /* Establece la altura máxima deseada */
+}
+
+/* modificaciones para el carrucel de la seccion interesado */
+.carousel-image {
+    width: 400px; /* Tamaño fijo deseado */
+    height: 700px; /* Tamaño fijo deseado */
+    object-fit: cover; /* Para mantener la relación de aspecto y recortar la imagen si es necesario */
+}
+
+
+/* ********************* BOOTSTRAP STYLES (MODIFICACIONES A BS) ******************** */
+
+/* color de fondo de la navbar */ 
+.bg-dark{
+    background-color: var(--second-color) !important;
+}
+
+/* codigo que saque de https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.css
+   para modificar los colores de las flechitas del carrusel para eso despues del 
+   %23 escribi el color en hexadecimal que necesitaba, en este caso (010007) */
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FFFFFF'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+  }
+  
+  .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FFFFFF'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  }
+
+/* ********************* MY STYLES ******************** */
+
+/* color de fondo para Antecedentes */
+.bg-color{
+    background-color:var(--bg-color) ;
+}
+
+/* capa de color con transparencia para poner sobre las imagenes */
+.bg-alpha-color {
+    background-color: var(--bg-alpha-color);
+}
+
+/* clase personalizada para el color del link en las cards */
+.text-third{
+    color:var(--link-color);
+}
+
+/* clase personalizada para poner color de fondo */
+.bg-third-color {
+    background-color: var(--third-color);
+}
+
+/* para poner de fondo una imagen la cual mandamos como variable
+    a traves de la etiqueta style en el html */
+.bg-image{
+    background-image: var(--bg-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* clase auxiliar para que al dar click a una seccion, se suba un poco
+    la scroll-bar, ya que tapaba un poco el contenido */
+.scroll-margin-top {
+    scroll-margin-top: 80px; /* Ajusta el valor según el tamaño de tu barra de navegación */
+    scroll-padding-top: 80px; /* Ajusta el valor según el tamaño de tu barra de navegación */
+  }
+
+/*clase para que las imagenes de las tarjetas utilicen todo el espacio */
+.img-cover {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* compactar imagenes de la seccion de comencemos */
+.img-size {
+    height: 85%;
+    width: 85%;
+}
+
+
+/* ********************* MEDIA QUERYS ******************** */
+
+ /*X-Small devices (portrait phones, less than 576px)
+ No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+    /* para quitar el fondo al pasar al modo grande al usar hover */
+    .nav-item:hover{
+        background-color: transparent;
+    }
+
+
+ }
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+    /* para que al pasar al modo largo las flechas esten de color negro
+    (cuando sea un tamaño menor, que sean blancas ya que se ponen encima de las imagenes) */
+    .carousel-control-prev-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23010007'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+      }
+      
+      .carousel-control-next-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23010007'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+      }
+ }
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {  }

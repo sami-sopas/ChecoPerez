@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>¿Interesados? | Checo Pérez</title>
+  <!-- Invocando a bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <!-- Invocando los iconos de bootstrap-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Invocando nuestra hoja de estilos personalizada-->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Invocando tipografia Ralewai-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;0,700;1,400&family=Ubuntu:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <!-- Icono de la pagina -->
+  <link rel="icon" href="img/sp_icon.png">
+</head>
+
+<body>
+  <!-- BARRA DE NAVEGACION (TOP)-->
+  <nav class="navbar sticky-top navbar-expand-lg bg-dark rounded shadow-sm">
+    <!-- sticky top hace que no se tape el contenido -->
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/sp_icon.png" alt="Checo Perez">
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-lg-auto"> <!--margen automatico para empujar los titulos a la derecha-->
+          <!-- INICIO -->
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+          </li>
+          <!-- SITIOS -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Antecedentes
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="sitios.html#sauber">Sauber</a></li>
+              <li><a class="dropdown-item" href="sitios.html#racing-point">Racing Point</a></li>
+              <li><a class="dropdown-item" href="sitios.html#red-bull">Red Bull</a></li>
+            </ul>
+          </li>
+          <!-- CLIENTES -->
+          <li class="nav-item">
+            <a class="nav-link" href="clientes.html">Compañeros</a>
+          </li>
+          <!-- COMENCEMOS -->
+          <li class="nav-item">
+            <a class="nav-link" href="comencemos.html">Comencemos</a>
+          </li>
+          <!-- INTERESADO -->
+          <li class="nav-item active">
+            <a class="nav-link" href="contacto.html">¿Interesado?</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main class="pt-4 bg-color">
+    <div class="container mb-5">
+      <section class="row">
+        <!-- Seccion de texto -->
+        <article class="col-12 text-center">
+          <h1>¿Interesado?</h1>
+          <p class="fs-5">Enviame tus propuestas!</p>
+          <p class="fs-5">Para más informacion, puedes contactarme a través de 
+            <a href="mailto:sami@sopas.com">sami@sopas.com</a>
+          </p>
+        </article>
+        <!-- Formulario-->
+        <article class="col-12 col-lg-6 order-lg-1">
+          <form action="https://formsubmit.co/ramirezcuenca@outlook.es" method="POST">
+            <div class="mb-3">
+              <label for="name" class="form-label fw-bold">Nombre:</label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Tu nombre" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label fw-bold">Email:</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Tu correo" required>
+            </div>
+            <div class="mb-3">
+              <label for="comments" class="form-label fw-bold">Comentarios:</label>
+            <textarea rows="5" name="comments" id="comments" class="form-control" placeholder="Dejanos tus comentarios" required></textarea>
+            </div>
+            <div class="mb-3 text-center text-lg-start">
+              <input type="submit" value="Enviar" class="btn btn-lg btn-success">
+              <input type="hidden" name="_next" value="http://127.0.0.1:5500/gracias.html">
+              <input type="hidden" name="_subject" value="Solicitud Checo Perez">
+            </div>
+
+          </form>
+        </article>
+        <!-- Mapa -->
+        <article class="col-12 col-lg-6 d-flex">
+          <div class="ratio ratio-16x9">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d466.8036510963862!2d-103.3808315!3d20.6113549!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDM2JzQwLjciTiAxMDPCsDIyJzUxLjAiVw!5e0!3m2!1ses-419!2smx!4v1688864413248!5m2!1ses-419!2smx"
+               style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </article>
+      </section>
+    </div>
+    <!-- Carrusel de imagenes -->
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-inner"> <!-- moviendo el caption para tener un rectangulo en cada slide, con un color de fondo y aplicando z-index para que salga enfrente -->
+        <div class="carousel-caption bg-secong-alpha-color z-1 text-dark rounded">
+          <article>
+            <aside>
+              <p class="fs-4"><b>Checo Pérez</b></p>
+              <p class="fs-5 d-none d-sm-block">Piloto de Formula 1</p>
+            </aside>
+            <aside class="d-none d-md-block">
+              <p>Comencé a correr para la maxima cateogoria del 
+                automovilismo desde <b>2014</b>.
+              </p>
+              <p>Valoro mucho el apoyo de <em>"<b>mis fans</b>"</em>.</p>
+              <p>Trabajo siempre por y para el equipo.</p>
+            </aside>
+          </article>
+        </div>
+        <div class="carousel-item active">
+          <img src="img/about1.jpg" class="d-block w-100 carousel-image" alt="about1">
+        </div>
+        <div class="carousel-item">
+          <img src="img/about2.jpg" class="d-block w-100 carousel-image" alt="about2">
+        </div>
+        <div class="carousel-item">
+          <img src="img/about3.jpg" class="d-block w-100 carousel-image" alt="about3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </main>
+
+  <!-- PIE DE PAGINA (BOTTOM)-->
+  <footer class="bg-dark p-3">
+    <div class="container text-center">
+      <nav class="d-flex justify-content-evenly fs-4"> <!-- Iconos / Enlaces-->
+        <!-- a[href="https://.com][target="_blank"]*7>i.bi.bi-  -->
+        <a href="https://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="bi bi-twitter"></i></a>
+        <a href="https://github.com" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://youtube.com" target="_blank"><i class="bi bi-youtube"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://messenger.com" target="_blank"><i class="bi bi-messenger"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=5215512345678" target="_blank"><i class="bi bi-whatsapp"></i></a>
+      </nav>
+      <br>
+      <small class="text-dark">&copy; 2023 @sami-sopas. Hecho con fines educativos, tomando inspiracion de la pagina de
+        <a href="checoperez.com" target="_blank">Checo Pérez.</a></small>
+    </div>
+
+
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    //Script JS para que al dar click a un elemento de la navbar, este se colapse automaticamente
+    const bsCollapse = new bootstrap.Collapse('#navbarNavDropdown', {
+      toggle: false
+    })
+
+    //agregamos al documento el evento click mediante delegacion de eventos
+    document.addEventListener("click", (e) => {
+
+      /* Si el evento que origina el evento (e), 
+      su selector no coincide con el que estoy buscando (en este caso enlaces de la navbar ) regresamos falso*/
+      if(!e.target.matches(".navbar a")) return false;
+
+      bsCollapse.hide(); //Cuando coincide, se colapsa ese menu
+    });
+  </script>
+</body>
+
+</html>
