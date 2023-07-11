@@ -3,7 +3,8 @@ Static Web Page about  Sergio "Checo Pérez".
 
 ## About 💡
 
-It's a simple responsive web page with the purpose of practicing HTML, CSS and Bootstrap, which is a framework that facilitates the web layout process, to which personally, I'm not going to invest too much time or I hope so...
+It's a simple responsive web page with the purpose of practicing HTML, CSS and Bootstrap, which is a framework that facilitates the web layout process, to which personally, I'm not going to invest too much time or I hope so...  
+
 
 ## Tools 🔨
 
@@ -32,6 +33,8 @@ The elements that I can highlight are the following:
 * Sending to email
 * Responsive
 * And more...
+
+**This page started as a challenge from my friend Juanito**
 
 
 
