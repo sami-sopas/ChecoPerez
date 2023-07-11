@@ -5,6 +5,8 @@ Static Web Page about  Sergio "Checo Pérez".
 
 It's a simple responsive web page with the purpose of practicing HTML, CSS and Bootstrap, which is a framework that facilitates the web layout process, to which personally, I'm not going to invest too much time or I hope so...  
 
+**You can check the page on the next link >>> https://sami-sopas.github.io/ChecoPerez/**
+
 
 ## Tools 🔨
 
